@@ -1,0 +1,3 @@
+[submodule "JikuG/vendor/spdlog"]
+	path = JikuG/vendor/spdlog
+	url = https://github.com/gabime/spdlog
