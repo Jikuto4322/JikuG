@@ -4,6 +4,9 @@
     <Filter Include="JikuG">
       <UniqueIdentifier>{BF7F750D-2B94-9DBE-F415-411E60E999EF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="JikuG\Events">
+      <UniqueIdentifier>{C31E0471-AF81-9315-5807-CCCB44495F98}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\JikuG.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\JikuG\EntryPoint.h">
       <Filter>JikuG</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JikuG\Events\ApplicationEvent.h">
+      <Filter>JikuG\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JikuG\Events\Event.h">
+      <Filter>JikuG\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JikuG\Events\KeyEvent.h">
+      <Filter>JikuG\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JikuG\Events\MouseEvent.h">
+      <Filter>JikuG\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\JikuG\Log.h">
       <Filter>JikuG</Filter>

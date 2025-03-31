@@ -27,6 +27,7 @@ project "JikuG"
 
     includedirs
     {
+        "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include"
     }
 
@@ -81,8 +82,8 @@ project "Sandbox"
 
     includedirs
     {
-        "JikuG/vendor/spdlog/include",
-        "JikuG/src"
+        "JikuG/src",
+        "JikuG/vendor/spdlog/include"
     }
 
     links
@@ -106,6 +107,9 @@ project "Sandbox"
             "JG_PLATFORM_WINDOWS"
         }
 
+    debugdir ("%{wks.location}/bin/" .. outputdir .. "/Sandbox")
+    debugcommand ("%{wks.location}/bin/" .. outputdir .. "/Sandbox/Sandbox.exe")    
+    
     filter "configurations:Debug"
         defines { "JG_DEBUG" }
         symbols "On"
