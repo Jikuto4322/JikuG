@@ -1,3 +1,4 @@
+#include "jgpch.h"
 #include "Log.h"
 
 namespace JikuG {

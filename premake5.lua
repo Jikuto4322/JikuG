@@ -19,6 +19,9 @@ project "JikuG"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "jgpch.h"
+    pchsource "JikuG/src/jgpch.cpp"
+
     files 
     {
         "%{prj.name}/src/**.h",

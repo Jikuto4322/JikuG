@@ -34,6 +34,7 @@
     <ClInclude Include="src\JikuG\Log.h">
       <Filter>JikuG</Filter>
     </ClInclude>
+    <ClInclude Include="src\jgpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\JikuG\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\JikuG\Log.cpp">
       <Filter>JikuG</Filter>
     </ClCompile>
+    <ClCompile Include="src\jgpch.cpp" />
   </ItemGroup>
 </Project>

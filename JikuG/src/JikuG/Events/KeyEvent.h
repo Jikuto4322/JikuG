@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>	
-
 namespace JikuG {
 
 	class JIKUG_API KeyPressedEvent : public Event

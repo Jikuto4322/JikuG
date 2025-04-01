@@ -2,9 +2,6 @@
 
 #include "JikuG/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace JikuG {
 
 	// Events in JikuG are currently blocking. Processes
