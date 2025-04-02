@@ -11,10 +11,17 @@ workspace "JikuG"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "JikuG/vendor/GLFW/include"
+
+include "JikuG/vendor/GLFW"
+
 project "JikuG"
     location "JikuG"
     kind "SharedLib"
     language "C++"
+    staticruntime "off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -31,13 +38,20 @@ project "JikuG"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"
         architecture "x64"
         cppdialect "c++17"
-        staticruntime "On"
+        staticruntime "Off"
         systemversion "latest"
 
         defines 
@@ -57,12 +71,17 @@ project "JikuG"
         }
 
     filter "configurations:Debug"
+        runtime "Debug"
         defines { "JG_DEBUG" }
         symbols "On"
+        buildoptions { "/MDd" }
+        
 
     filter "configurations:Release"
+        runtime "Release"
         defines { "JG_RELEASE" }
         optimize "On"
+        buildoptions { "/MD" }
 
     filter "configurations:Dist"
         defines { "JG_DIST" }

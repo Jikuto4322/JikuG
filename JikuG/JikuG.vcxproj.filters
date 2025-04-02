@@ -7,6 +7,12 @@
     <Filter Include="JikuG\Events">
       <UniqueIdentifier>{C31E0471-AF81-9315-5807-CCCB44495F98}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\JikuG.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\JikuG\Log.h">
       <Filter>JikuG</Filter>
     </ClInclude>
+    <ClInclude Include="src\JikuG\Window.h">
+      <Filter>JikuG</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\jgpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\JikuG\Log.cpp">
       <Filter>JikuG</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\jgpch.cpp" />
   </ItemGroup>
