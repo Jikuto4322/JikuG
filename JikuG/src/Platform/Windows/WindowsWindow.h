@@ -1,8 +1,12 @@
 #pragma once
 
 #include "JikuG/Window.h"
-
+#include "JikuG/Log.h"
 #include <GLFW/glfw3.h>
+
+#include "JikuG/Events/ApplicationEvent.h"
+#include "JikuG/Events/MouseEvent.h"
+#include "JikuG/Events/KeyEvent.h"
 
 namespace JikuG {
 	
@@ -13,12 +17,12 @@ namespace JikuG {
 		virtual ~WindowsWindow();
 
 		void OnUpdate() override;
-		
+
 		unsigned int GetWidth() const override { return m_Data.Width; }
 		unsigned int GetHeight() const override { return m_Data.Height; }
-		
+
 		// Window attributes
-		void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
+		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
 		inline void* GetNativeWindow() const override { return m_Window; }

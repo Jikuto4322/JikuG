@@ -37,6 +37,12 @@
     <ClInclude Include="src\JikuG\Events\MouseEvent.h">
       <Filter>JikuG\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\JikuG\Layer.h">
+      <Filter>JikuG</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JikuG\LayerStack.h">
+      <Filter>JikuG</Filter>
+    </ClInclude>
     <ClInclude Include="src\JikuG\Log.h">
       <Filter>JikuG</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\JikuG\Application.cpp">
+      <Filter>JikuG</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JikuG\Layer.cpp">
+      <Filter>JikuG</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JikuG\LayerStack.cpp">
       <Filter>JikuG</Filter>
     </ClCompile>
     <ClCompile Include="src\JikuG\Log.cpp">

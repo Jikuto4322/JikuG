@@ -21,7 +21,6 @@ project "JikuG"
     location "JikuG"
     kind "SharedLib"
     language "C++"
-    staticruntime "off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -71,20 +70,18 @@ project "JikuG"
         }
 
     filter "configurations:Debug"
-        runtime "Debug"
-        defines { "JG_DEBUG" }
+        defines "JG_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
-        buildoptions { "/MDd" }
         
-
     filter "configurations:Release"
-        runtime "Release"
-        defines { "JG_RELEASE" }
+        defines "JG_RELEASE"
+        buildoptions "/MD"
         optimize "On"
-        buildoptions { "/MD" }
 
     filter "configurations:Dist"
-        defines { "JG_DIST" }
+        defines "JG_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 
@@ -92,6 +89,7 @@ project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
+    staticruntime "Off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -133,14 +131,17 @@ project "Sandbox"
     debugcommand ("%{wks.location}/bin/" .. outputdir .. "/Sandbox/Sandbox.exe")    
     
     filter "configurations:Debug"
-        defines { "JG_DEBUG" }
+        defines "JG_DEBUG"
         symbols "On"
+        buildoptions "/MDd"
 
     filter "configurations:Release"
-        defines { "JG_RELEASE" }
+        defines "JG_RELEASE"
         optimize "On"
+        buildoptions "/MD"
 
     filter "configurations:Dist"
-        defines { "JG_DIST" }
+        defines "JG_DIST"
         optimize "On"
+        buildoptions "/MD"
 

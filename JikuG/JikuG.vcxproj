@@ -139,7 +139,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/utf-8 /MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -163,6 +163,8 @@
     <ClInclude Include="src\JikuG\Events\Event.h" />
     <ClInclude Include="src\JikuG\Events\KeyEvent.h" />
     <ClInclude Include="src\JikuG\Events\MouseEvent.h" />
+    <ClInclude Include="src\JikuG\Layer.h" />
+    <ClInclude Include="src\JikuG\LayerStack.h" />
     <ClInclude Include="src\JikuG\Log.h" />
     <ClInclude Include="src\JikuG\Window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
@@ -170,6 +172,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\JikuG\Application.cpp" />
+    <ClCompile Include="src\JikuG\Layer.cpp" />
+    <ClCompile Include="src\JikuG\LayerStack.cpp" />
     <ClCompile Include="src\JikuG\Log.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\jgpch.cpp">

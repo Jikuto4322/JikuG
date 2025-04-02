@@ -48,7 +48,6 @@ namespace JikuG {
 			return GetCategoryFlags() & category;
 		}
 
-	protected:
 		bool Handled = false;
 	};
 
