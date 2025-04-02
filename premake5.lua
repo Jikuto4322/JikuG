@@ -14,8 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "JikuG/vendor/GLFW/include"
+IncludeDir["Glad"] = "JikuG/vendor/Glad/include"
 
 include "JikuG/vendor/GLFW"
+include "JikuG/vendor/Glad"
 
 project "JikuG"
     location "JikuG"
@@ -38,12 +40,14 @@ project "JikuG"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -56,7 +60,8 @@ project "JikuG"
         defines 
         { 
             "JG_PLATFORM_WINDOWS",
-            "JG_BUILD_DLL"
+            "JG_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         buildoptions 

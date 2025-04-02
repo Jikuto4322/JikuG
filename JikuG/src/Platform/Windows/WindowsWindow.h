@@ -1,12 +1,9 @@
 #pragma once
 
 #include "JikuG/Window.h"
-#include "JikuG/Log.h"
 #include <GLFW/glfw3.h>
 
-#include "JikuG/Events/ApplicationEvent.h"
-#include "JikuG/Events/MouseEvent.h"
-#include "JikuG/Events/KeyEvent.h"
+struct GLFWwindow;
 
 namespace JikuG {
 	
